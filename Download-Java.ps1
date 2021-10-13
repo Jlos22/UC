@@ -16,8 +16,6 @@ else
 ###Invoke-WebRequest -Uri https://cdnstoragepublic.blob.core.windows.net/cdndelivery/UC-One.msi -outfile "C:\UC-One\UC-One.msi" -UseBasicParsing
 Start-BitsTransfer -Source "https://cdnstoragepublic.blob.core.windows.net/cdndelivery/UC-One.msi" -Destination "C:\UC-One\UC-One.msi"
 
-#wait for download
-Start-Sleep -Seconds 20
 
 Set-Location C:\UC-One\
 
