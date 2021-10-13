@@ -14,9 +14,11 @@ else
   }
 
 
-Set-Location C:\UC-One\
+Start-Process msiexec.exe -Wait -ArgumentList 'C:\UC-One\UC-One.msi /quiet /passive'
 
-.\UC-One.msi /quiet /passive
+###Set-Location C:\UC-One\
+
+###.\UC-One.msi /quiet /passive
 
 
 
