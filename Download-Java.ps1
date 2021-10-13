@@ -7,6 +7,7 @@ if(!(Test-Path -Path $path))
     #Gathers Files required
     ###Invoke-WebRequest -Uri https://cdnstoragepublic.blob.core.windows.net/cdndelivery/UC-One.msi -outfile "C:\UC-One\UC-One.msi" -UseBasicParsing
     Start-BitsTransfer -Source "https://cdnstoragepublic.blob.core.windows.net/cdndelivery/UC-One.msi" -Destination "C:\UC-One\UC-One.msi"
+    Start-Process msiexec.exe -Wait -ArgumentList 'C:\UC-One\UC-One.msi /quiet /passive'
   }
 else
   {
@@ -14,7 +15,6 @@ else
   }
 
 
-Start-Process msiexec.exe -Wait -ArgumentList 'C:\UC-One\UC-One.msi /quiet /passive'
 
 ###Set-Location C:\UC-One\
 
