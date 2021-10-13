@@ -1,6 +1,6 @@
 ##Open IE
 $ie = Start-Process -file iexplore -arg 'http://www.google.com' -PassThru
-sleep 5
+sleep 20
 $ie.Kill()
 
 
