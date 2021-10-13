@@ -1,3 +1,8 @@
+##Open IE
+$ie = Start-Process -file iexplore -arg 'http://www.google.com' -PassThru
+sleep 5
+$ie.Kill()
+
 
 #Check Path
 $path = "C:\UC-One"
